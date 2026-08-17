@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mike — Bricoleur & Électronicien DIY</title>
+<meta name="description" content="Présentation de Mike : électronique DIY, IoT, serveurs maison et projets DIY.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --bg-soft: #171a21;
+    --card: #1d212b;
+    --border: #2a2f3a;
+    --text: #e8eaf0;
+    --muted: #9aa3b2;
+    --accent: #ffb347;
+    --accent2: #4fc3f7;
+    --green: #66bb6a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: var(--accent2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(255,179,71,.12), transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(79,195,247,.10), transparent 50%),
+      var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .badge {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-size: .85rem;
+    padding: .35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    letter-spacing: .5px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 7vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(120deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero .sub {
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    color: var(--muted);
+    margin: 1rem auto 2rem;
+    max-width: 640px;
+  }
+  .hero .cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: .7rem 1.6rem;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); text-decoration: none; background: #242936; }
+  .btn.primary { background: var(--accent); color: #1a1408; border-color: var(--accent); }
+  .btn.primary:hover { background: #ffc46b; }
+
+  /* SECTIONS */
+  section { padding: 4rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    letter-spacing: -0.5px;
+  }
+  .section-sub { color: var(--muted); margin-bottom: 2.5rem; max-width: 600px; }
+
+  /* À PROPOS */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .about-grid p { color: var(--muted); }
+  .about-grid strong { color: var(--text); }
+  .about-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+  }
+  .about-card h3 { color: var(--accent); margin-bottom: .6rem; font-size: 1.1rem; }
+
+  /* PROJETS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .project {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .project:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .project .icon { font-size: 1.8rem; margin-bottom: .6rem; }
+  .project h3 { font-size: 1.05rem; margin-bottom: .3rem; }
+  .project p { color: var(--muted); font-size: .92rem; }
+  .project .tag {
+    display: inline-block;
+    font-size: .72rem;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: .2rem .6rem;
+    border-radius: 999px;
+    margin-top: .8rem;
+    color: var(--accent2);
+  }
+
+  /* SKILLS */
+  .skills { display: flex; flex-wrap: wrap; gap: .8rem; }
+  .skill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: .55rem 1.1rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    color: var(--text);
+  }
+  .skill span { color: var(--accent); margin-right: .4rem; }
+
+  /* FOOTER / CONTACT */
+  .contact {
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--bg-soft);
+  }
+  .contact h2 { margin-bottom: 1rem; }
+  .contact .links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: .85rem;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+
+  @media (max-width: 760px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .hero { min-height: 75vh; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="badge">⚡ DIY · Électronique · IoT · Serveurs</div>
+  <h1>Mike</h1>
+  <p class="sub">
+    Bricoleur numérique et électronicien du dimanche (et tous les autres jours).
+    Je monte, je soude, je code, je casse, je répare — et j'apprends à chaque fois.
+  </p>
+  <div class="cta">
+    <a href="#projets" class="btn primary">Voir mes projets</a>
+    <a href="#contact" class="btn">Me contacter</a>
+  </div>
+</header>
+
+<!-- À PROPOS -->
+<section id="apropos">
+  <h2>Qui suis-je ?</h2>
+  <p class="section-sub">Un esprit curieux entre le fer à souder et le terminal.</p>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>🔧 Côté atelier</h3>
+      <p>
+        Électronique DIY : batteries LiPo, modules ESP32, capteurs, écrans TFT,
+        chargeurs et MOSFETs. Chaque projet est une excuse pour apprendre quelque chose de nouveau.
+      </p>
+    </div>
+    <div class="about-card">
+      <h3>🖥️ Côté serveur</h3>
+      <p>
+        Un serveur maison <strong>Proxmox</strong> qui fait tourner mes services :
+        hébergement web, domotique et automatisation. Le genre de truc qu'on setup une fois et qu'on optimise pour toujours.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets">
+  <h2>Mes projets</h2>
+  <p class="section-sub">Un échantillon de ce qui sort de l'atelier.</p>
+  <div class="projects-grid">
+
+    <div class="project">
+      <div class="icon">🛴</div>
+      <h3>Upgrade batterie trottinette</h3>
+      <p>Augmentation de la capacité batterie pour plus d'autonomie au quotidien.</p>
+      <span class="tag">Batterie</span> <span class="tag">Électrique</span>
+    </div>
+
+    <div class="project">
+      <div class="icon">🛰️</div>
+      <h3>Tracker GPS DIY</h3>
+      <p>Traceur GPS maison sur ESP32 + module NEO-6M, zéro abonnement, zéro SIM. Communication WiFi vers Traccar.</p>
+      <span class="tag">ESP32</span> <span class="tag">GPS</span> <span class="tag">IoT</span>
+    </div>
+
+    <div class="project">
+      <div class="icon">🛹</div>
+      <h3>Overboard — hoverboard électrique</h3>
+      <p>Refonte d'un hoverboard : schéma fonctionnel, électronique de puissance et reconditionnement.</p>
+      <span class="tag">Électronique de puissance</span>
+    </div>
+
+    <div class="project">
+      <div class="icon">🏠</div>
+      <h3>Domotique & alertes</h3>
+      <p>Automatisation maison : alarmes connectées, notifications Telegram, supervision quotidienne automatique.</p>
+      <span class="tag">Home Assistant</span> <span class="tag">Automatisation</span>
+    </div>
+
+    <div class="project">
+      <div class="icon">💾</div>
+      <h3>Serveur maison Proxmox</h3>
+      <p>Virtualisation, stockage, services web, sauvegardes automatisées. Le cœur de l'infra perso.</p>
+      <span class="tag">Proxmox</span> <span class="tag">Docker</span>
+    </div>
+
+    <div class="project">
+      <div class="icon">🌐</div>
+      <h3>Site & présence web</h3>
+      <p>Refonte de site, extraction et sauvegarde de contenu, pages de présentation et projets web.</p>
+      <span class="tag">Web</span> <span class="tag">Contenu</span>
+    </div>
+
+    <div class="project">
+      <div class="icon">🚗</div>
+      <h3>Mécanique & diagnostic auto</h3>
+      <p>Suivi complet d'une Peugeot 307 HDI : diagnostic OBD (Thinkdiag), chasse aux codes défauts (EGR, injection), entretien et maintenance.</p>
+      <span class="tag">Mécanique</span> <span class="tag">Diagnostic OBD</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences">
+  <h2>Compétences & outils</h2>
+  <p class="section-sub">La caisse à outils, numérique et physique.</p>
+  <div class="skills">
+    <div class="skill"><span>⚡</span>Électronique & soudure</div>
+    <div class="skill"><span>🔩</span>ESP32 / Arduino / IoT</div>
+    <div class="skill"><span>🐧</span>Linux & serveurs</div>
+    <div class="skill"><span>📦</span>Docker</div>
+    <div class="skill"><span>🏗️</span>Proxmox</div>
+    <div class="skill"><span>🤖</span>Home Assistant</div>
+    <div class="skill"><span>🛠️</span>Batteries LiPo / Li-ion</div>
+    <div class="skill"><span>🚗</span>Mécanique auto & OBD</div>
+    <div class="skill"><span>🗄️</span>Automatisation & scripts</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Me contacter</h2>
+  <p class="section-sub" style="margin: 0 auto;">
+    Un projet, une question, une idée ? On en discute.
+  </p>
+  <div class="links">
+    <a class="btn" href="https://github.com/mike88700" target="_blank" rel="noopener">🐙 GitHub</a>
+  </div>
+</section>
+
+<footer>
+  ⚡ Fait avec passion — fer à souder, café et quelques MOSFETs.
+</footer>
+
+</body>
+</html>
