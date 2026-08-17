@@ -114,6 +114,27 @@
   }
   .about-card h3 { color: var(--accent); margin-bottom: .6rem; font-size: 1.1rem; }
 
+  /* BOB */
+  .bob-card {
+    background: linear-gradient(135deg, rgba(255,179,71,.08), rgba(79,195,247,.08)), var(--card);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .bob-card::after {
+    content: "🤖";
+    position: absolute;
+    right: -10px;
+    bottom: -20px;
+    font-size: 6rem;
+    opacity: .08;
+    transform: rotate(-12deg);
+  }
+  .bob-card h3 { color: var(--accent); margin-bottom: .6rem; font-size: 1.1rem; }
+  .bob-card p { color: var(--muted); max-width: 700px; }
+
   /* PROJETS */
   .projects-grid {
     display: grid;
@@ -212,6 +233,21 @@
         hébergement web, domotique et automatisation. Le genre de truc qu'on setup une fois et qu'on optimise pour toujours.
       </p>
     </div>
+  </div>
+</section>
+
+<!-- BOB -->
+<section id="bob">
+  <h2>Mon sidekick</h2>
+  <p class="section-sub">Derrière chaque projet, il y a mon assistant.</p>
+  <div class="bob-card">
+    <h3>🤖 Bob — l'assistant de l'atelier</h3>
+    <p>
+      Bob, c'est mon assistant IA maison. Il m'aide sur tous mes projets :
+      il code, il me sort des schémas de câblage à toute heure, il gère les serveurs,
+      il surveille la maison et il tient la documentation à jour.
+      Le genre de pote qu'on aimerait tous avoir dans son atelier.
+    </p>
   </div>
 </section>
 
