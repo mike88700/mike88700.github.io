@@ -162,6 +162,8 @@
     margin-top: .8rem;
     color: var(--accent2);
   }
+  .project .photos { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin: .8rem 0 .4rem; }
+  .project .photos img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
 
   /* SKILLS */
   .skills { display: flex; flex-wrap: wrap; gap: .8rem; }
@@ -262,6 +264,9 @@
       <div class="icon">🛴</div>
       <h3>Upgrade batterie trottinette</h3>
       <p>Augmentation de la capacité batterie pour plus d'autonomie au quotidien.</p>
+      <div class="photos" style="grid-template-columns:1fr">
+        <img src="images/trottinette.jpg" alt="Trottinette électrique">
+      </div>
       <span class="tag">Batterie</span> <span class="tag">Électrique</span>
     </div>
 
@@ -269,6 +274,9 @@
       <div class="icon">🛰️</div>
       <h3>Tracker GPS DIY</h3>
       <p>Traceur GPS maison sur ESP32 + module NEO-6M, zéro abonnement, zéro SIM. Communication WiFi vers Traccar.</p>
+      <div class="photos" style="grid-template-columns:1fr">
+        <img src="images/gps-tracker.jpg" alt="Montage électronique DIY sur breadboard">
+      </div>
       <span class="tag">ESP32</span> <span class="tag">GPS</span> <span class="tag">IoT</span>
     </div>
 
@@ -276,6 +284,9 @@
       <div class="icon">🛹</div>
       <h3>Overboard — hoverboard électrique</h3>
       <p>Refonte d'un hoverboard : schéma fonctionnel, électronique de puissance et reconditionnement.</p>
+      <div class="photos" style="grid-template-columns:1fr">
+        <img src="images/hoverboard.jpg" alt="Hoverboard électrique — gyropode 2 roues">
+      </div>
       <span class="tag">Électronique de puissance</span>
     </div>
 
@@ -283,6 +294,9 @@
       <div class="icon">🏠</div>
       <h3>Domotique & alertes</h3>
       <p>Automatisation maison : alarmes connectées, notifications Telegram, supervision quotidienne automatique.</p>
+      <div class="photos" style="grid-template-columns:1fr">
+        <img src="images/domotique-rpi.jpg" alt="Carte Raspberry Pi — cerveau de la domotique">
+      </div>
       <span class="tag">Home Assistant</span> <span class="tag">Automatisation</span>
     </div>
 
@@ -290,6 +304,9 @@
       <div class="icon">💾</div>
       <h3>Serveur maison Proxmox</h3>
       <p>Virtualisation, stockage, services web, sauvegardes automatisées. Le cœur de l'infra perso.</p>
+      <div class="photos" style="grid-template-columns:1fr">
+        <img src="images/proxmox-dashboard.jpg" alt="Interface Proxmox VE — vue cluster, nœuds et conteneurs">
+      </div>
       <span class="tag">Proxmox</span> <span class="tag">Docker</span>
     </div>
 
@@ -297,6 +314,9 @@
       <div class="icon">🌐</div>
       <h3>Site & présence web</h3>
       <p>Refonte de site, extraction et sauvegarde de contenu, pages de présentation et projets web.</p>
+      <div class="photos" style="grid-template-columns:1fr">
+        <img src="images/site-web.jpg" alt="Développement web — code à l'écran">
+      </div>
       <span class="tag">Web</span> <span class="tag">Contenu</span>
     </div>
 
@@ -304,6 +324,10 @@
       <div class="icon">🖨️</div>
       <h3>Impression 3D — Kobra Neo & Klipper</h3>
       <p>Anycubic Kobra Neo pilotée par un BIGTREETECH Pad 7 sous Klipper : calibration, profils filaments et pièces custom. Les boîtiers de mes projets sortent de cette machine.</p>
+      <div class="photos">
+        <img src="images/kobra-s1.jpg" alt="Anycubic Kobra S1 Combo">
+        <img src="images/kobra-neo.jpg" alt="Anycubic Kobra Neo">
+      </div>
       <span class="tag">Impression 3D</span> <span class="tag">Klipper</span> <span class="tag">BTT Pad 7</span>
     </div>
 
@@ -311,6 +335,9 @@
       <div class="icon">🚗</div>
       <h3>Mécanique & diagnostic auto</h3>
       <p>Suivi complet d'une Peugeot 307 HDI : diagnostic OBD (Thinkdiag), chasse aux codes défauts (EGR, injection), entretien et maintenance.</p>
+      <div class="photos" style="grid-template-columns:1fr">
+        <img src="images/mecanique-307-distrib.jpg" alt="Distribution Peugeot 307 HDI — poulies et moteur ouvert">
+      </div>
       <span class="tag">Mécanique</span> <span class="tag">Diagnostic OBD</span>
     </div>
 
@@ -348,6 +375,8 @@
 
 <footer>
   ⚡ Fait avec passion — fer à souder, café et quelques MOSFETs.
+  <br><small style="opacity:.6">Photos imprimantes : © Anycubic — Kobra S1 & Kobra Neo · Interface Proxmox VE : CC BY-SA (Wikimedia)
+  · Trottinette : Wikimedia CC BY-SA · Hoverboard & Raspberry Pi : Flickr CC BY · Breadboard : Flickr CC BY-SA · Code : CC0 (pd.w.org)</small>
 </footer>
 
 </body>
